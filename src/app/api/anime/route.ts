@@ -56,12 +56,13 @@ export async function GET(request: Request) {
         const image = $(element).find('.thumb a img').attr('src') || '/placeholder.jpg'
         const episode = $(element).find('.epz').text().trim()
 
-        animes.push({
-          title,
-          url,
-          image,
-          episode,
-        })
+        // Di bagian where you create anime objects
+animes.push({
+  title,
+  url,
+  image: image || 'https://raw.githubusercontent.com/NdikzDatabase/Database/main/Database/1754394396624-k6s68p.jpg',
+  episode,
+})
       })
     }
 
